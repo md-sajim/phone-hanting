@@ -18,81 +18,33 @@
     />
   </head>
   <body>
-    <main>
-      <!-- header  -->
-      <header>
-        <div class="headingStyle">
-          <h1>Mobile Unlimited Express</h1>
-        </div>
-      </header>
+    <!-- header  -->
+    <header>
+      <div class="headingStyle">
+        <h1>Mobile Unlimited Express</h1>
+      </div>
+    </header>
+    <main class="container">
       <!-- Searce Filed -->
-
-      <div class="input-group mb-3 w-75 mx-auto mt-3">
+      <div class="input-group mb-3 mx-auto mt-3">
         <input
+          id="input-id"
           type="text"
           class="form-control"
           placeholder="Searce your phone"
           aria-label="Searce your phone"
           aria-describedby="basic-addon2"
         />
-        <span class="input-group-text" id="basic-addon2">Searce</span>
+        <span class="input-group-text" onclick="SearceingFiled()">Searce</span>
       </div>
+
       <!-- card Filed -->
       <section>
         <div class="container">
-          <div id="card" class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div
+            id="displayContainer"
+            class="row row-cols-1 row-cols-md-3 g-4"
+          ></div>
         </div>
       </section>
     </main>
