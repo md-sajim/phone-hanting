@@ -37,6 +37,7 @@ const displayField = (phoneInfo) => {
     // alert section and display extra detils
     document.getElementById("error-alart").style.display = "none";
     document.getElementById("error-alartNoFound").style.display = "none";
+
     phoneInfo.forEach((element) => {
       const creatdiv = document.createElement("div");
       creatdiv.innerHTML = `<div class="col">
@@ -74,7 +75,7 @@ const phoneDetailInfo = (phoneinformation) => {
   creatDetileDiv.innerHTML = `<div class="mb-3 mx-auto">
     <div class="row g-0">
       <div class="col-md-6 col-sm-12 d-flex justify-content-center">
-        <img
+        <img width="400"
           src="${phoneinformation.image}"
           class="rounded-start"
           alt="..."
@@ -148,6 +149,15 @@ const phoneDetailInfo = (phoneinformation) => {
                   aria-controls="list-storage"
                   >Storage</a
                 >
+                <a
+                  class="list-group-item list-group-item-action"
+                  id="list-SenSors-list"
+                  data-bs-toggle="list"
+                  href="#list-SenSors"
+                  role="tab"
+                  aria-controls="list-SenSors"
+                  >SenSors</a
+                >
               </div>
             </div>
             <div class="col-lg-9 col-sm-6">
@@ -175,8 +185,9 @@ const phoneDetailInfo = (phoneinformation) => {
                   id="list-releaseDate"
                   role="tabpanel"
                   aria-labelledby="list-releaseDate-list"
-                ><h3>Release Date:
+                ><h3>Release Date:<span>
                 ${phoneinformation.releaseDate}
+                </span>
                 </h3>
                 </div>
                 <div
@@ -214,6 +225,21 @@ const phoneDetailInfo = (phoneinformation) => {
                 ><h3>Storage:
                 ${phoneinformation.mainFeatures.storage}
                 </h3>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="list-SenSors"
+                  role="tabpanel"
+                  aria-labelledby="list-SenSors-list"
+                ><h3>Featurees </h3><br>
+                <ul>
+                 <li> ${phoneinformation.mainFeatures.sensors[0]}</li>
+                 <li>${phoneinformation.mainFeatures.sensors[1]}</li>
+                 <li>${phoneinformation.mainFeatures.sensors[2]}</li>
+                 <li>${phoneinformation.mainFeatures.sensors[3]}</li>
+                 <li> ${phoneinformation.mainFeatures.sensors[4]}</li>
+                 <li> ${phoneinformation.mainFeatures.sensors[5]}</li>
+                </ul>                                                                          
                 </div>
               </div>
             </div>
