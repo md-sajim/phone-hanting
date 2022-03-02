@@ -3,7 +3,6 @@ document.getElementById("error-alart").style.display = "none";
 // No Found alert
 document.getElementById("error-alartNoFound").style.display = "none";
 // Searh Button
-// displayField
 const displayArea = document.getElementById("displayContainer");
 displayArea.textContent = "";
 const SearceingFiled = () => {
@@ -26,6 +25,7 @@ const SearceingFiled = () => {
       .then((data) => displayField(data.data));
   }
 };
+
 // displayField ************
 const displayField = (phoneInfo) => {
   if (phoneInfo.length == 0) {
@@ -34,7 +34,7 @@ const displayField = (phoneInfo) => {
     document.getElementById("error-alartNoFound").style.display = "block";
     displayArea.textContent = "";
   } else {
-    // alert section and display extra detils
+    // alert section and display Phone
     document.getElementById("error-alart").style.display = "none";
     document.getElementById("error-alartNoFound").style.display = "none";
 
@@ -58,6 +58,7 @@ const displayField = (phoneInfo) => {
     });
   }
 };
+// Phone Details function start
 const phoneDetail = (phoneDataDetail) => {
   console.log(phoneDataDetail);
   url = `https://openapi.programming-hero.com/api/phone/${phoneDataDetail}`;
@@ -66,7 +67,7 @@ const phoneDetail = (phoneDataDetail) => {
     .then((res) => res.json())
     .then((dataPhone) => phoneDetailInfo(dataPhone.data));
 };
-// button group
+//Phone Detail function
 const phoneDetailInfo = (phoneinformation) => {
   console.log(phoneinformation);
   const phoneDetailsinfo = document.getElementById("detilesPhone");
@@ -185,9 +186,9 @@ const phoneDetailInfo = (phoneinformation) => {
                   id="list-releaseDate"
                   role="tabpanel"
                   aria-labelledby="list-releaseDate-list"
-                ><h3>Release Date:<span>
+                ><h3>Release Date:
                 ${phoneinformation.releaseDate}
-                </span>
+                
                 </h3>
                 </div>
                 <div
