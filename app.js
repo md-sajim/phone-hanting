@@ -74,8 +74,8 @@ const phoneDetail = (phoneDataDetail) => {
 };
 //Phone Detail function
 const phoneDetailInfo = (phoneinformation) => {
-  console.log(phoneinformation);
-
+  // console.log(phoneinformation);
+  phoneDetailsinfo.textContent = "";
   const creatDetileDiv = document.createElement("div");
   creatDetileDiv.innerHTML = `<div class="mb-3 mx-auto">
     <div class="row g-0">
