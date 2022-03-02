@@ -2,9 +2,13 @@
 document.getElementById("error-alart").style.display = "none";
 // No Found alert
 document.getElementById("error-alartNoFound").style.display = "none";
-// Searh Button
+
+// id display main container
 const displayArea = document.getElementById("displayContainer");
 displayArea.textContent = "";
+//id display details Field
+const phoneDetailsinfo = document.getElementById("detilesPhone");
+phoneDetailsinfo.textContent = "";
 const SearceingFiled = () => {
   const inputFiled = document.getElementById("input-id");
   const inputFiledValue = inputFiled.value;
@@ -15,6 +19,7 @@ const SearceingFiled = () => {
     document.getElementById("error-alart").style.display = "block";
     document.getElementById("error-alartNoFound").style.display = "none";
     displayArea.textContent = "";
+    phoneDetailsinfo.textContent = "";
   } else {
     document.getElementById("error-alart").style.display = "none";
     document.getElementById("error-alartNoFound").style.display = "none";
@@ -33,6 +38,7 @@ const displayField = (phoneInfo) => {
     document.getElementById("error-alart").style.display = "none";
     document.getElementById("error-alartNoFound").style.display = "block";
     displayArea.textContent = "";
+    phoneDetailsinfo.textContent = "";
   } else {
     // alert section and display Phone
     document.getElementById("error-alart").style.display = "none";
@@ -60,7 +66,6 @@ const displayField = (phoneInfo) => {
 };
 // Phone Details function start
 const phoneDetail = (phoneDataDetail) => {
-  console.log(phoneDataDetail);
   url = `https://openapi.programming-hero.com/api/phone/${phoneDataDetail}`;
 
   fetch(url)
@@ -70,8 +75,7 @@ const phoneDetail = (phoneDataDetail) => {
 //Phone Detail function
 const phoneDetailInfo = (phoneinformation) => {
   console.log(phoneinformation);
-  const phoneDetailsinfo = document.getElementById("detilesPhone");
-  phoneDetailsinfo.textContent = "";
+
   const creatDetileDiv = document.createElement("div");
   creatDetileDiv.innerHTML = `<div class="mb-3 mx-auto">
     <div class="row g-0">
